@@ -83,7 +83,9 @@ body {
 .valid-span span:nth-child(2) {
   color: rgb(0, 98, 255);
 }
-
+.up-in {
+  cursor: pointer;
+}
 @media (max-width: 1024px) {
   .valid-main {
     height: 100vh;

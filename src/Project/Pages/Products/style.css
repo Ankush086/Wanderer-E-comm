@@ -58,3 +58,24 @@
   opacity: 1;
   transform: translatey(-2px);
 }
+
+@media (max-width: 780px) {
+  .navbar {
+    padding: 40px 0 10px 0;
+    transform: none;
+    position: absolute;
+    top: 0;
+    z-index: 997;
+  }
+  .btn-group__item {
+    font-size: 0.8rem;
+    padding: 15px 20px;
+  }
+}
+
+@media (max-width: 320px) {
+  .btn-group__item {
+    font-size: 0.5rem;
+    padding: 10px 10px;
+  }
+}

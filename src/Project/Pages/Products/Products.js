@@ -6,7 +6,6 @@ import Footermain from "../../Components/Footer/Footermain";
 import NavbarNew from "../../Components/Navbar Main/NavbarNew";
 import Navbar from "../../Components/Navbar/Navbar";
 import "../Products/style.css";
-import Test from "../Test/Test";
 function Products() {
   const { api, filterList, uniqueList } = useContext(ApiContext);
 

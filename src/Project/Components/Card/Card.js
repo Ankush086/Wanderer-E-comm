@@ -32,12 +32,10 @@ function Card() {
                 <div className="imgBx">
                   <img src={image} alt="" />
                   <ul className="action">
-                    <div onClick={console.log("meow")}>
-                      <li onClick={() => setWishList((prev) => [...prev, id])}>
-                        <i className="fas fa-heart"></i>
-                        <span>Add To Wishlist</span>
-                      </li>
-                    </div>
+                    <li onClick={() => setWishList((prev) => [...prev, id])}>
+                      <i className="fas fa-heart"></i>
+                      <span>Add To Wishlist</span>
+                    </li>
                     <li onClick={() => handleAddToCart(curElem, true)}>
                       <i className="fas fa-shopping-cart"></i>
                       <span>Add To Cart</span>

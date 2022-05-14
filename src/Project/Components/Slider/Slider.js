@@ -5,7 +5,7 @@ import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css/skyblue";
 function Slider() {
   return (
-    <div>
+    <div className="silder__main">
       <Splide aria-label="My Favorite Images">
         <SplideSlide>
           <img src="hd2.jpg" alt="Image 1" />

@@ -210,7 +210,7 @@
 
 @media (max-width: 640px) {
   .main-container {
-    padding-top: 50px;
+    padding-top: 120px;
   }
   .container {
     width: 70%;
@@ -259,6 +259,9 @@
 }
 
 @media (max-width: 320px) {
+  .main-container {
+    padding-top: 180px;
+  }
   .container {
     width: 70%;
     display: grid;

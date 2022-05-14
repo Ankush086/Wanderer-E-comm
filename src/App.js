@@ -44,6 +44,7 @@ function App() {
     setInterval(() => {
       if (paymentId) {
         window.location.reload();
+        localStorage.removeItem("rzp_device_id");
       }
     }, 2000);
   }, [paymentId]);
@@ -68,10 +69,8 @@ function App() {
           path="/product"
           element={user ? <Products /> : <Navigate replace to="/" />}
         />
-        {/* <Route
-          path={paymentId ? "/order-confirm" : "/cart"}
-          element={<OrderConfirmed />}
-        /> */}
+        <Route path={"/order-confirm"} element={<OrderConfirmed />} />
+
         <Route
           path="/cart"
           element={user ? <Cart /> : <Navigate replace to="/" />}
