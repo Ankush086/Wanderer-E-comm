@@ -45,7 +45,7 @@ function Validation() {
           <input
             name="password"
             type="password"
-            placeholder="Password"
+            placeholder="Password Should be 6 character long"
             required
             ref={passwordRef}
             onKeyPress={(e) => e.key === "Enter" && handleLogIn}

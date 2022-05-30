@@ -75,7 +75,7 @@ function Cart() {
       key: "rzp_test_ZLUarWYff88w8V",
       amount: paise,
       currency: "INR",
-      name: "Famms",
+      name: "Wanderer",
       description: "Test Transaction",
       image: "download.png",
       handler: function (response) {

@@ -2,17 +2,14 @@ import React, { useEffect, useState } from "react";
 import "../Footer/style.css";
 import "@fortawesome/fontawesome-free/js/all.js";
 function Footer() {
-  const [sub, setSub] = useState({
-    email: "",
-    bool: false,
-  });
-  function handleclick(cond) {
-    if (sub.bool != cond) {
-      return setSub({ bool: true });
-    } else {
-      return setSub({ bool: false });
-    }
+  const [sub, setSub] = useState("");
+
+  function isEmail(emailString) {
+    var regEx = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    return emailString.match(regEx) != null;
   }
+
+  console.log(sub);
   return (
     <>
       <div className="footer-main " id="footer">
@@ -64,25 +61,23 @@ function Footer() {
           <div className="footer-sub">
             <h3>Subscribe</h3>
             <p>Don't miss to subscribe our new feeds.</p>
-
-            {sub.bool === true ? (
-              <p className="footer-subbed">Thankyou for Subscribing!</p>
-            ) : (
-              <>
-                <div className="footer-sub-btn">
-                  <input
-                    type="text"
-                    placeholder="Email Address"
-                    required
-                    value={sub.email}
-                    onChange={(e) => setSub({ email: e.target.value })}
-                  />
-                  <button onClick={() => handleclick(true)}>
-                    <i className="fa-solid fa-paper-plane"></i>
-                  </button>
-                </div>
-              </>
-            )}
+            <div className="footer-sub-btn">
+              <input
+                type="text"
+                placeholder="Email Address"
+                required
+                value={sub}
+                onChange={(e) => setSub(e.target.value)}
+              />
+              <button
+                onClick={
+                  console.log("Hello")
+                  // () => isEmail(sub)
+                }
+              >
+                <i className="fa-solid fa-paper-plane"></i>
+              </button>
+            </div>
           </div>
         </div>
       </div>

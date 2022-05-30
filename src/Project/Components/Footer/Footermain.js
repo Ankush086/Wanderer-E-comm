@@ -1,25 +1,12 @@
 import React, { useState } from "react";
 
 function Footermain() {
-  const [addSub, setAddSub] = useState({
-    email: "",
-    bool: Boolean,
-  });
+  const [addSub, setAddSub] = useState("");
 
-  // console.log(addSub.email.length);
-  // console.log(addSub.bool);
-  // console.log(addSub.email);
-  // const handleSub = () => {
-  //   if (addSub.email.includes("@gmail.com")) {
-  //     return setAddSub({
-  //       bool: true,
-  //     });
-  //   } else {
-  //     return setAddSub({
-  //       bool: false,
-  //     });
-  //   }
-  // };
+  function isEmail(emailString) {
+    var regEx = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    return emailString.match(regEx) != null;
+  }
   return (
     <>
       <footer id="footer">
@@ -74,31 +61,30 @@ function Footermain() {
               </div>
             </h3>
 
-            {addSub.bool === true ? (
-              <p>Thank-you for Subscribing.</p>
-            ) : (
-              <>
-                <div className="footer-sub">
-                  <i className="fa-solid fa-envelope"></i>
-                  <input
-                    type="email"
-                    placeholder="Enter your email id"
-                    value={addSub.email}
-                    onChange={(e) => {
-                      setAddSub({ email: e.target.value });
-                    }}
-                  />
-                  <button>
-                    <i className="fa-solid fa-arrow-right"></i>
-                  </button>
-                </div>
-                <div className="social-icons">
-                  <i className="fa-brands fa-facebook-f"></i>
-                  <i className="fa-brands fa-twitter"></i>
-                  <i className="fa-brands fa-instagram"></i>
-                </div>
-              </>
-            )}
+            <div className="footer-sub">
+              <i className="fa-solid fa-envelope"></i>
+              <input
+                type="email"
+                placeholder="Enter your email id"
+                value={addSub}
+                onChange={(e) => {
+                  setAddSub(e.target.value);
+                }}
+              />
+              <button
+                onClick={
+                  console.log(addSub)
+                  // isEmail(addSub)
+                }
+              >
+                <i className="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+            <div className="social-icons">
+              <i className="fa-brands fa-facebook-f"></i>
+              <i className="fa-brands fa-twitter"></i>
+              <i className="fa-brands fa-instagram"></i>
+            </div>
           </div>
         </div>
 
